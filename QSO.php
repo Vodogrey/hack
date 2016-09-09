@@ -2,8 +2,7 @@
 <?php
 
 include ('db_data.php');
-$db = mysql_connect($host, $user, $pwd);
-mysql_select_db("pj", $db);
+
  
 $current_login = $_COOKIE["login"];
  
@@ -93,7 +92,7 @@ $myrow = mysql_fetch_array($result);
 	<div class=" text-center">
 					
 <div class="row">
-					<div class="row row-mt-sm">
+					<div class="row row-mt-5em">
 
 								
 					 <table class="scroll">
@@ -117,12 +116,80 @@ $myrow = mysql_fetch_array($result);
 						 ?>
 						 </table> 
 	
-						</div>		</div>
+						</div>
+						</div>
 						
 					</div>
 							
-					
+			
 
+	<header id="gtco-header" class="gtco-cover gtco-cover-lt" role="banner" ">
+		<div class="overlay"></div>
+	
+	</header>
+
+<div class=" text-center">
+					
+<div class="row">
+					<div class="row row-mt-sm">
+
+						  <div class="row form-group">
+                                                        
+					 <table class="scroll">
+						   <tbody>
+							 
+							<tr>
+								<td> 
+                                                        <div class="col-md-12">
+                                                            <label for="username">Confirm password</label>
+                                                            <input type="text" class="form-control" id="username">
+                                                        </div>
+                               	</td>
+								<td> 
+                                                        <div class="col-md-12">
+                                                            <label for="username">Confirm password</label>
+                                                            <input type="text" class="form-control" id="username">
+                                                        </div>
+                               	</td>
+								<td> 
+														<div class="col-md-12">
+                                                            <label for="username">Band: </label>
+                                                           	<select name="nubexSelect" size="1"  form="nubexForm">
+															<option>CW</option>
+															<option>SSB</option>
+															<option>RT3Y</option>
+															</select>
+                                                        </div>
+
+                               	</td>
+									<td> 
+           <form id="nubexForm" action="do.php">
+		 <div class="col-md-12">
+														<input type="submit" class="btn btn-primary" value="Send">
+													</div>
+	</form>
+	
+	 
+                               	</td>
+								
+							</tr>
+							  </tbody>
+					</table> 
+	
+						</div>
+						</div>
+						
+					</div>
+
+
+
+
+
+			
+	<header id="gtco-header" class="gtco-cover gtco-cover-lt" role="banner" style="background-image: url(images/img_4.jpg)">
+		<div class="overlay"></div>
+	
+	</header>
 
 	 
 
