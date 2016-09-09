@@ -113,9 +113,13 @@
 												</div>
 											</form>	
 										</div>
-
+<!--<form method="post" action="index.php" enctype="multipart/form-data" >
+      Name  <input type="text" name="name" id="name"/></br>
+      Email <input type="text" name="email" id="email"/></br>
+      <input type="submit" name="submit" value="Submit" />
+</form> !-->
 										<div class="tab-content-inner" data-content="login">
-											<form action="#">
+											<form method="post" action="database.php" enctype="multipart/form-data">
 												<div class="row form-group">
 													<div class="col-md-12">
 														<label for="username">Username or Email</label>
@@ -167,22 +171,7 @@
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 	<!-- PHP Database=pj;Data Source=eu-cdbr-azure-north-e.cloudapp.net;User Id=b7625632439068;Password=1b4fd4f4
-	<?php
 
-$host = "eu-cdbr-azure-north-e.cloudapp.net";
-$user = "b7625632439068";
-$pwd = "1b4fd4f4";
-$db = "pj";
-
-try {
-    $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
-    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-}
-catch(Exception $e){
-    die(var_dump($e));
-}
-
-    ?>-->
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
