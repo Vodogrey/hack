@@ -236,14 +236,11 @@ $db = mysql_connect ($host, $user, $pwd);
 mysql_select_db ("pj",$db);
 if (!$db) echo "Connect FALSE";
 
-echo "syka blyat0";
-$login_user = $_COOKIE["login"]; echo "syka blyat1";
-$sql = "select * from USERS where LOGIN_USERS = '$login_user'";		echo "syka blyat2";		
+$login_user = $_COOKIE["login"];
+$sql = "select * from USERS where LOGIN_USERS = '$login_user'";
 		if ($result = mysql_query($sql))
 			echo "select OK";
-		else echo "syka blyat";
 	
 $myrow = mysql_fetch_array($result);
-echo $myrow['PASSWORD_USERS'];
-		
+echo $myrow['PASSWORD_USERS'];		
 ?>
