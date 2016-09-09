@@ -18,7 +18,7 @@ try {
      $registrants = $stmt->fetchAll(); 
 	if(count($registrants) > 0)
 		{ 
-	header ('Location: QSO.html');
+	header ('Location: QSO.php');
       setcookie("login", $username);
       setcookie("pass", $pass);
 	} 
