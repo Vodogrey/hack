@@ -9,7 +9,6 @@ $user_password = $_COOKIE["pass"];
 $sql = "select * from USERS where LOGIN_USERS = '$user_login' and PASSWORD_USERS = '$user_password'";
 		if (!$result = mysql_query($sql))
 			echo ":c";
-echo "<\br $sql>";
 		if(mysql_num_rows($result) == 1) {
 			header ('Location: QSO.php');
 			//echo "trouble";
