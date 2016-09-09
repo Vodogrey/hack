@@ -1,4 +1,26 @@
+<?php
+include 'db_data.php';
+$db = mysql_connect ($host, $user, $pwd);
+mysql_select_db ("pj",$db);
+if (!$db) echo "Connect FALSE";
 
+$user_login = $_COOKIE["login"];
+$user_password = $_COOKIE["pass"];
+$sql = "select * from USERS where LOGIN_USERS = '$user_login' and PASSWORD_USERS = '$user_password'";
+		if (!$result = mysql_query($sql))
+			echo ":c";
+echo "<\br $sql>";
+		if(mysql_num_rows($result) == 1) {
+			header ('Location: QSO.php');
+			//echo "trouble";
+		}
+		else {
+			if($db) {
+			unset($_COOKIE["login"]);
+			unset($_COOKIE["pass"]);
+			}
+		}	
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -49,7 +71,7 @@
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="index.html">SPORADIC.log<em>.</em></a></div>
+					<div id="gtco-logo"><a href="index.php">SPORADIC.log<em>.</em></a></div>
 				</div>
 				
 				<div class="col-xs-8 text-right menu-1">
@@ -162,23 +184,3 @@
 
 	</body>
 </html>
-
-<?php
-include 'db_data.php';
-$db = mysql_connect ($host, $user, $pwd);
-mysql_select_db ("pj",$db);
-if (!$db) echo "Connect FALSE";
-
-$user_login = $_COOKIE["login"];
-$user_password = $_COOKIE["password"];
-
-$sql = "select * from USERS where LOGIN_USERS = '$login_user' and PASSWORD_USERS = '$user_password'";
-
-		if (!$result = mysql_query($sql)) {
-		unset($_COOKIE["login"]);
-		unset($_COOKIE["password"]);
-		}
-		else
-		header ('Location: QSO.html');
-
-?>
