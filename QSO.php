@@ -15,7 +15,7 @@ where
     and
     pj.usercalls.ID_CALL = pj.cals.ID_CALLS");
 $myrow = mysql_fetch_array($result);
-echo $myrow['CALL_CALLS'];
+ 
 
 ?>
 <html>
@@ -72,7 +72,7 @@ echo $myrow['CALL_CALLS'];
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
 						 
-						<li class="btn-cta"><a href="#"><span>Exit</span></a></li>
+						<li class="btn-cta"><a href="exit.php"><span>Exit</span></a></li>
 						<li class="btn-cta"><a href="#"><span>Contest</span></a></li>
 						
 					</ul>
@@ -91,12 +91,13 @@ echo $myrow['CALL_CALLS'];
 	
 	
 	 <div>  
-
+ <table class="scroll">
 	 <?php 
 	 printf ("
-	 <table class>
+	
+	   <tbody>
 		<tr>
-            <td><h4   >Your Call: %s ;</h4>	</td>
+            <td><h4   >Your Call: %s </h4>	</td>
             <td><h4   >Contest: GENERAL QSO </h4>	</td>
           
         </tr>
@@ -105,10 +106,11 @@ echo $myrow['CALL_CALLS'];
             <td><h4   >QTH: Taganrog </h4>	</td>
             
         </tr>
-		</table> ",
+		  </tbody>
+		",
 	$myrow['CALL_CALLS']);
 	 ?>
-	 
+	 </table> 
 	
     </div>
 
