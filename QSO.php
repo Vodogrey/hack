@@ -1,11 +1,16 @@
 <!DOCTYPE HTML>
+<?php
+
+include ('dbdata.php');
+$db = mysql_connect($host, $user, $pwd);
+mysql_select_db("pj", $db);
+
+?>
 <html>
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Splash &mdash; Free Website Template, Free HTML5 Template by FreeHTML5.co</title>
-
-
+	<title>SPORADIC.LOG</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 	
@@ -70,6 +75,7 @@
 		<div class="overlay"></div>
 	
 	</header>
+	
 	
 	<div class="gtco-section  ">
 		<div class="gtco-container">
@@ -228,21 +234,3 @@
 	</body>
 </html>
 
-<<<<<<< HEAD
-
-<?php
-include 'db_data.php';
-$db = mysql_connect ($host, $user, $pwd);
-mysql_select_db ("pj",$db);
-if (!$db) echo "Connect FALSE";
-
-$login_user = $_COOKIE["login"];
-$sql = "select * from USERS where LOGIN_USERS = '$login_user'";
-		if ($result = mysql_query($sql))
-			echo "select OK";
-	
-$myrow = mysql_fetch_array($result);
-echo $myrow['PASSWORD_USERS'];		
-?>
-=======
->>>>>>> origin/master
