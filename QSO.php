@@ -72,13 +72,14 @@
 	</header>
 	
 	
-	<div class="gtco-section border-bottom">
+	<div class="gtco-section  ">
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="col-md-6 animate-box">
-					<h3>Get In Touch</h3>
+					
 					<form action="#">
+					<h4>Your Call:</h4>
 						<div class="row form-group">
 							<div class="col-md-12">
 								<label class="sr-only" for="name">Name</label>
@@ -86,27 +87,38 @@
 							</div>
 							
 						</div>
-
+						
+					<h4>Your Call:</h4>
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label class="sr-only" for="email">Email</label>
-								<input type="text" id="email" class="form-control" placeholder="Your email address">
+								<label class="sr-only" for="name">Name</label>
+								<input type="text" id="name" class="form-control" placeholder="Your firstname">
 							</div>
-						</div>
-
+							
+						</div>	
+						
+					<h4>Your Call:</h4>
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label class="sr-only" for="subject">Subject</label>
-								<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+								<label class="sr-only" for="name">Name</label>
+								<input type="text" id="name" class="form-control" placeholder="Your firstname">
 							</div>
-						</div>
-
+							
+						</div>	
+						
+						
+					<h4>Your Call:</h4>
 						<div class="row form-group">
 							<div class="col-md-12">
-								<label class="sr-only" for="message">Message</label>
-								<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Write us something"></textarea>
+								<label class="sr-only" for="name">Name</label>
+								<input type="text" id="name" class="form-control" placeholder="Your firstname">
 							</div>
-						</div>
+							
+						</div>	
+						
+						
+						
+						
 						<div class="form-group">
 							<input type="submit" value="Send Message" class="btn btn-primary">
 						</div>
