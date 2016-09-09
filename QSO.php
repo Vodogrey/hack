@@ -225,10 +225,10 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
-	
 	</body>
 </html>
 
+<<<<<<< HEAD
 
 <?php
 include 'db_data.php';
@@ -244,3 +244,5 @@ $sql = "select * from USERS where LOGIN_USERS = '$login_user'";
 $myrow = mysql_fetch_array($result);
 echo $myrow['PASSWORD_USERS'];		
 ?>
+=======
+>>>>>>> origin/master
