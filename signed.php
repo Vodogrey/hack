@@ -59,7 +59,8 @@ if ($username && $login && $password && $cpassword && $email && $secquestion && 
 		}
 		header ('Location: index.html');
 	}
-} else header ('Location: sign_up.html');
+	} else header ('Location: sign_up.html');
+ 
 
 ; 
 
