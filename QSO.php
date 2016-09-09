@@ -4,11 +4,18 @@
 include ('db_data.php');
 $db = mysql_connect($host, $user, $pwd);
 mysql_select_db("pj", $db);
-$current_login = 'andy.koshmaroff';
-echo $current_login;
-$result = mysql_query("SELECT * FROM users WHERE LOGIN_USERS = 'andy.koshmaroff'");
+ 
+$current_login = $_COOKIE["login"];
+ 
+$result = mysql_query("SELECT CALL_CALLS FROM pj.users,pj.usercalls,pj.cals
+where 
+	pj.users.LOGIN_USERS = 'andy.koshmaroff'
+    and
+    pj.users.ID_USERS = pj.usercalls.ID_USER
+    and
+    pj.usercalls.ID_CALL = pj.cals.ID_CALLS");
 $myrow = mysql_fetch_array($result);
-echo $myrow['LOGIN_USERS'];
+echo $myrow['CALL_CALLS'];
 
 ?>
 <html>
@@ -86,19 +93,20 @@ echo $myrow['LOGIN_USERS'];
 	 <div>  
 
 	 <?php 
-	 printf ("<table>
+	 printf ("
+	 <table class>
 		<tr>
             <td><h4   >Your Call: %s ;</h4>	</td>
-            <td><h4   >Contest: %s </h4>	</td>
+            <td><h4   >Contest: GENERAL QSO </h4>	</td>
           
         </tr>
         <tr>
-            <td><h4  >Your Call: R3W-225 </h4>	</td>
-            <td><h4   >Your Call: R3W-225 </h4>	</td>
+            <td><h4  >RDA: KU03 </h4>	</td>
+            <td><h4   >QTH: Taganrog </h4>	</td>
             
         </tr>
 		</table> ",
-	$myrow['LOGIN_USERS']);
+	$myrow['CALL_CALLS']);
 	 ?>
 	 
 	
