@@ -1,9 +1,14 @@
 <!DOCTYPE HTML>
 <?php
 
-include ('dbdata.php');
+include ('db_data.php');
 $db = mysql_connect($host, $user, $pwd);
 mysql_select_db("pj", $db);
+$current_login = 'andy.koshmaroff';
+echo $current_login;
+$result = mysql_query("SELECT * FROM users WHERE LOGIN_USERS = 'andy.koshmaroff'");
+$myrow = mysql_fetch_array($result);
+echo $myrow['LOGIN_USERS'];
 
 ?>
 <html>
@@ -54,13 +59,13 @@ mysql_select_db("pj", $db);
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="index.html">SPORADIC.log<em>.</em></a></div>
+					<div id="gtco-logo"><a href="index.php">SPORADIC.log<em>.</em></a></div>
 				</div>
 				
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
 						 
-						<li><a href="test_page.html">TEST_Page</a></li>
+						<li class="btn-cta"><a href="#"><span>Exit</span></a></li>
 						<li class="btn-cta"><a href="#"><span>Contest</span></a></li>
 						
 					</ul>
@@ -77,138 +82,31 @@ mysql_select_db("pj", $db);
 	</header>
 	
 	
-	<div class="gtco-section  ">
-		<div class="gtco-container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="col-md-6 animate-box">
-					
-					<form action="#">
-					<h4>Your Call:</h4>
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label class="sr-only" for="name">Name</label>
-								<input type="text" id="name" class="form-control" placeholder="Your firstname">
-							</div>
-							
-						</div>
-						
-					<h4>Your Call:</h4>
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label class="sr-only" for="name">Name</label>
-								<input type="text" id="name" class="form-control" placeholder="Your firstname">
-							</div>
-							
-						</div>	
-						
-					<h4>Your Call:</h4>
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label class="sr-only" for="name">Name</label>
-								<input type="text" id="name" class="form-control" placeholder="Your firstname">
-							</div>
-							
-						</div>	
-						
-						
-					<h4>Your Call:</h4>
-						<div class="row form-group">
-							<div class="col-md-12">
-								<label class="sr-only" for="name">Name</label>
-								<input type="text" id="name" class="form-control" placeholder="Your firstname">
-							</div>
-							
-						</div>	
-						
-						
-						
-						
-						<div class="form-group">
-							<input type="submit" value="Send Message" class="btn btn-primary">
-						</div>
+	
+	 <div>  
 
-					</form>		
-				</div>
-				<div class="col-md-5 col-md-push-1 animate-box">
-	<!-- !-->
-	<table class="scroll">
-    <thead>
+	 <?php 
+	 printf ("<table>
+		<tr>
+            <td><h4   >Your Call: %s ;</h4>	</td>
+            <td><h4   >Contest: %s </h4>	</td>
+          
+        </tr>
         <tr>
-            <th>Head 1</th>
-            <th>Head 2</th>
-            <th>Head 3</th>
-            <th>Head 4</th>
+            <td><h4  >Your Call: R3W-225 </h4>	</td>
+            <td><h4   >Your Call: R3W-225 </h4>	</td>
             
         </tr>
-    </thead>
+		</table> ",
+	$myrow['LOGIN_USERS']);
+	 ?>
+	 
 	
-    <tbody>
-        <tr>
-            <td>Content 1</td>
-            <td>Content 2</td>
-            <td>Content 3</td>
-            <td>Content 4</td>
-            <td>Content 5</td>
-        </tr>
-        <tr>
-            <td>Content 1</td>
-            <td>Lorem ipsum</td>
-            <td>Content 3</td>
-            <td>Content 4</td>
-            <td>Content 5</td>
-        </tr>
-        <tr>
-            <td>Content 1</td>
-            <td>Content 2</td>
-            <td>Content 3</td>
-            <td>Content 4</td>
-            <td>Content 5</td>
-        </tr>
-        <tr>
-            <td>Content 1</td>
-            <td>Content 2</td>
-            <td>Content 3</td>
-            <td>Content 4</td>
-            <td>Content 5</td>
-        </tr>
-        <tr>
-            <td>Content 1</td>
-            <td>Content 2</td>
-            <td>Content 3</td>
-            <td>Content 4</td>
-            <td>Content 5</td>
-        </tr>
-        <tr>
-            <td>Content 1</td>
-            <td>Content 2</td>
-            <td>Content 3</td>
-            <td>Content 4</td>
-            <td>Content 5</td>
-        </tr>
-        <tr>
-            <td>Content 1</td>
-            <td>Content 2</td>
-            <td>Content 3</td>
-            <td>Content 4</td>
-            <td>Content 5</td>
-        </tr>
-    </tbody>
-</table>
-	<!-- !-->
+    </div>
 
-
-				</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	 
 
 	
-	</div>
-
-	</div>
-
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
