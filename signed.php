@@ -1,9 +1,6 @@
 <?php
 
-$host = "eu-cdbr-azure-north-e.cloudapp.net";
-$user = "b7625632439068";
-$pwd = "1b4fd4f4";
-$db = "pj";
+include 'db_data.php';
 
 $username = $_POST['username']; if ($username == '') unset ($username);
 $date = $_POST['date'];
@@ -17,8 +14,6 @@ $answer = $_POST['answer']; if ($answer == '') unset ($answer);
 $callsign = $_POST['callsign'];
 
 
-$db = mysql_connect ($host, $user, $pwd);
-mysql_select_db ("pj",$db);
 if ($db) echo "Connect OK";
 
 if ($username && $login && $password && $cpassword && $email && $secquestion && $answer)
@@ -57,7 +52,7 @@ if ($username && $login && $password && $cpassword && $email && $secquestion && 
 			
 			
 		}
-		header ('Location: index.html');
+		header ('Location: index.php');
 	}
 	} else header ('Location: sign_up.php');
  

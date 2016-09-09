@@ -504,6 +504,9 @@ h1, h2, h3, h4, h5, h6, figure {
 .gtco-cover.gtco-cover-lt {
   height: 80px;
 }
+.gtco-cover.gtco-cover-lt5 {
+  height: 5px;
+}
 @media screen and (max-width: 768px) {
   .gtco-cover.gtco-cover-sm {
     height: 400px;
@@ -982,6 +985,10 @@ form label {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+#gtco-footer .gtco-widget .gtco-quick-contact-not-nul {
+  padding: 0;
+ 
+}
 #gtco-footer .gtco-widget .gtco-quick-contact {
   padding: 0;
   margin: 0;
@@ -1450,6 +1457,9 @@ form label {
 .row-mt-15em {
   margin-top: 15em;
 }
+.row-mt-5em {
+  margin-top: 5%;
+}
 @media screen and (max-width: 768px) {
   .row-mt-15em {
     margin-top: 7em;
@@ -1859,17 +1869,24 @@ singup_h1 {
 	
 	
 }
+#QSO_Top_panel {
+	border:1px solid red;
+width:150px;
+height:50px;
+float:left;
+align: center;
+}
 
 table.scroll {
     width: 100%;
-   
+    
 }
 
 table.scroll th,
 table.scroll td,
 table.scroll tr,
 table.scroll thead,
-table.scroll tbody { display: block; }
+table.scroll tbody { display: block; align: center; }
 
 table.scroll thead tr {
     /* fallback */
@@ -1893,20 +1910,21 @@ table.scroll tbody {
     overflow-x: hidden;
 }
 
-table.scroll tbody td,
+table.scroll tbody td ,
 table.scroll thead th {
     width: 19%;
     float: left;
+
     border-right: 1px solid black;
 }
 
 thead tr th { 
     height: 30px;
     line-height: 30px;
-    /*text-align: left;*/
+    text-align: center; margin-left: 15px;
 }
 
-tbody { border-top: 2px solid black; }
+tbody { border-top: 0px solid black; }
 
 tbody td:last-child, thead th:last-child {
     border-right: none !important;
