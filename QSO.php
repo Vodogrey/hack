@@ -9,7 +9,7 @@ $current_login = $_COOKIE["login"];
  
 $result = mysql_query("SELECT CALL_CALLS FROM pj.users,pj.usercalls,pj.cals
 where 
-	pj.users.LOGIN_USERS = 'andy.koshmaroff'
+	pj.users.LOGIN_USERS = '$current_login'
     and
     pj.users.ID_USERS = pj.usercalls.ID_USER
     and
@@ -71,9 +71,9 @@ $myrow = mysql_fetch_array($result);
 				
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
-						 
-						<li class="btn-cta"><a href="exit.php"><span>Exit</span></a></li>
 						<li class="btn-cta"><a href="#"><span>Contest</span></a></li>
+						<li class="btn-cta"><a href="exit.php"><span>Exit</span></a></li>
+					
 						
 					</ul>
 				</div>
@@ -90,29 +90,39 @@ $myrow = mysql_fetch_array($result);
 	
 	
 	
-	 <div>  
- <table class="scroll">
-	 <?php 
-	 printf ("
+	<div class=" text-center">
+					
+<div class="row">
+					<div class="row row-mt-sm">
+
+								
+					 <table class="scroll">
+						 <?php 
+						 printf ("
+						
+						   <tbody>
+							<tr>
+								<td><h4   >Your Call: %s </h4>	</td>
+								<td><h4   >Contest: GENERAL QSO </h4>	</td>
+							  
+							</tr>
+							<tr>
+								<td><h4  >RDA: KU03 </h4>	</td>
+								<td><h4   >QTH: Taganrog </h4>	</td>
+								
+							</tr>
+							  </tbody>
+							",
+						$myrow['CALL_CALLS']);
+						 ?>
+						 </table> 
 	
-	   <tbody>
-		<tr>
-            <td><h4   >Your Call: %s </h4>	</td>
-            <td><h4   >Contest: GENERAL QSO </h4>	</td>
-          
-        </tr>
-        <tr>
-            <td><h4  >RDA: KU03 </h4>	</td>
-            <td><h4   >QTH: Taganrog </h4>	</td>
-            
-        </tr>
-		  </tbody>
-		",
-	$myrow['CALL_CALLS']);
-	 ?>
-	 </table> 
-	
-    </div>
+						</div>		</div>
+						
+					</div>
+							
+					
+
 
 	 
 
