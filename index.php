@@ -1,7 +1,5 @@
 <?php
 include 'db_data.php';
-$db = mysql_connect ($host, $user, $pwd);
-mysql_select_db ("pj",$db);
 if (!$db) echo "Connect FALSE";
 
 $user_login = $_COOKIE["login"];
