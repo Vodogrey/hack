@@ -128,32 +128,18 @@ $myrow = mysql_fetch_array($result);
 	
 	</header>
 
-<div class=" text-center">
+<div class="text-center">
 					
 <div class="row">
-					<div class="row row-mt-sm">
-
-						  <div class="row form-group">
+					
                                                         
-					 <table class="scroll">
+					 <table class="QSO_Top_panel" align="center">
 						   <tbody>
 							 
 							<tr>
-								<td> 
-                                                        <div class="col-md-12">
-                                                            <label for="username">Confirm password</label>
-                                                            <input type="text" class="form-control" id="username">
-                                                        </div>
-                               	</td>
-								<td> 
-                                                        <div class="col-md-12">
-                                                            <label for="username">Confirm password</label>
-                                                            <input type="text" class="form-control" id="username">
-                                                        </div>
-                               	</td>
-								<td> 
-														<div class="col-md-12">
-                                                            <label for="username">Band: </label>
+									<td> 
+														<div class="col-md-11">
+                                                            <label for="username">Mod: </label>
                                                            	<select name="nubexSelect" size="1"  form="nubexForm">
 															<option>CW</option>
 															<option>SSB</option>
@@ -162,6 +148,61 @@ $myrow = mysql_fetch_array($result);
                                                         </div>
 
                                	</td>
+								<td> 
+														<div class="col-md-11">
+                                                            <label for="username">Band: </label>
+                                                           	<select name="nubexSelect2" size="1"  form="nubexForm">
+															<option>10m</option>
+															<option>15m</option>
+															<option>20m</option>
+															<option>40m</option>
+															<option>80m</option>
+															<option>160m</option>
+															</select>
+                                                        </div>
+
+                               	</td>
+								<td> 
+                                        <div class="col-md-12">
+										<table >
+											 <tr>
+											<td>  <label for="username">Call: </label>
+											</td> 
+											<td>  <input type="text" class="active form-control" id="username" name="e_call">
+											</td> 
+										 </tr>
+										</table >										 
+                                         </div>                  
+                                                            
+                                                         
+                               	</td>
+								<td> 
+                                         <div class="col-md-12">
+										<table >
+										 <tr>
+											<td>  <label for="username">RST: </label>
+											</td> 
+											<td>  <input type="text" class="form-control" id="username" name="e_rst">
+											</td> 
+										 </tr>
+										</table >										 
+                                          </div>                   
+                                                            
+                                                         
+                               	</td>
+								<td> 
+                                           <div class="col-md-12">
+										  <table >
+										 <tr>
+											<td>  <label for="username">NR: </label>
+											</td> 
+											<td>  <input type="text" class="form-control" id="username" name = "e_nr">
+											</td> 
+										 </tr>
+										</table >	
+                                                        
+                               	</td>
+							
 									<td> 
            <form id="nubexForm" action="do.php">
 		 <div class="col-md-12">
@@ -176,8 +217,7 @@ $myrow = mysql_fetch_array($result);
 							  </tbody>
 					</table> 
 	
-						</div>
-						</div>
+					
 						
 					</div>
 

@@ -1870,11 +1870,9 @@ singup_h1 {
 	
 }
 #QSO_Top_panel {
-	border:1px solid red;
-width:150px;
-height:50px;
-float:left;
-align: center;
+	  
+text-align: center;
+
 }
 
 table.scroll {
