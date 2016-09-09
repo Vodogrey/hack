@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+.main_border {border:0px solid #000000;}
+
+p {
+	font-family: Verdana;
+	font-size: 12px;
+	margin: 15px;
+	text-align: left;
+}
+
+.left {background-color:#F6F6F6; border-right:0 px colid #424242;}
+
+body {background-image:url(img/bg.gif);}
+
+p.title {
+background-color: #A72E37;
+color: #ffffff;
+font-weight:bold;
+margin:5px;
+padding:5px;
+}
+
+#coolmenu{
+border: 1px solid gray; /*Стиль рамки */
+border-bottom-width: 0;
+width: 93%; /*Ширина меню */
+background-color: #f6f6f6;  /*Фоновый цвет ячейки*/
+margin:8px; /*Ширина отступов*/
+}
+
+* html #coolmenu{ 
+width: 150px;/*Ширина меню для Internet Explorer*/
+}
+
+#coolmenu a{
+font: bold 13px Verdana; /*Шрифт текста*/
+padding: 2px; /*Внутренний отсутп текста ссылки от краев ячейки*/
+padding-left: 4px;/*Внутренний отсутп текста ссылки от левого края ячейки*/
+display: block;
+width: 100%; /*Ширина ячейки*/
+color: #000000;  /*Цвет текста*/
+text-decoration: none; /*Подчеркивание у ссылок - нет*/
+border-bottom: 1px solid gray;
+}
+
+html>body #coolmenu a{ 
+width: auto;
+}
+
+#coolmenu a:hover{
+background-color: #cccccc; /*Фоновый цвет ячейки при наведение курсора*/
+color: #000000;  /*Цвет текста при наведении курсора*/
+}
+
+.lesson {border:1px solid #cccccc; width:95%;}
+.leccon_title {background-color:#f6f6f6}
+
+.lesson_name {font-weight:bold; margin-top:7px; margin-bottom:7px}
+.lesson_adds {font-size:11px; margin-top:7px; margin-bottom:7px; color:#828080;}
+
+.view-title {font-size:16px; font-weight:bold; color:#FF0004; text-align:center}
+.view-date {font-size:11px; color:424242; margin-top:7px; margin-bottom:7px; font-weight:bold;}
+.label {margin-bottom:10px;}
