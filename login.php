@@ -37,11 +37,6 @@ if(count($registrants) > 0) {
 
 }
 
-$func = 'login';
-
-
-
-
 
 try {
     $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
