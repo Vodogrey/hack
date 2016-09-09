@@ -9,7 +9,7 @@ $db = "pj";
 function login($arg_1, $arg_2)
 {
 	
-$sql_select = "SELECT * FROM registration_tbl";
+$sql_select = "SELECT * FROM users";
 $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll(); 
 
