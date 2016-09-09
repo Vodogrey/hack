@@ -7,8 +7,9 @@ $db = "pj";
 
 
 function login($arg_1, $arg_2)
-{
-	
+{  echo "function ok"; 
+  echo 	"$arg_1";
+  
 $sql_select = "SELECT * FROM registration_tbl";
 $stmt = $conn->query($sql_select);
 $registrants = $stmt->fetchAll(); 
@@ -42,10 +43,17 @@ try {
     $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 	 echo "Connected successfully"; 
-	$func("sfdd"," sdf"); 
+	 
+	// header ('Location: QSO.html');  // перенаправление на нужную страницу
+     
+	 echo $_POST['username']; 
+	 
+	//$func($_POST['username'],$_POST['password']); 
+	
 }
 catch(Exception $e){
     die(var_dump($e));
+	header ('Location: index.html'); 
 }
 
     ?>
