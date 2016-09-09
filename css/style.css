@@ -982,6 +982,10 @@ form label {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+#gtco-footer .gtco-widget .gtco-quick-contact-not-nul {
+  padding: 0;
+ 
+}
 #gtco-footer .gtco-widget .gtco-quick-contact {
   padding: 0;
   margin: 0;
@@ -1450,6 +1454,9 @@ form label {
 .row-mt-15em {
   margin-top: 15em;
 }
+.row-mt-5em {
+  margin-top: 5em;
+}
 @media screen and (max-width: 768px) {
   .row-mt-15em {
     margin-top: 7em;
@@ -1859,6 +1866,13 @@ singup_h1 {
 	
 	
 }
+#QSO_Top_panel {
+	border:1px solid red;
+width:150px;
+height:50px;
+float:left;
+align: center;
+}
 
 table.scroll {
     width: 100%;
@@ -1869,7 +1883,7 @@ table.scroll th,
 table.scroll td,
 table.scroll tr,
 table.scroll thead,
-table.scroll tbody { display: block; }
+table.scroll tbody { display: block;align: center; }
 
 table.scroll thead tr {
     /* fallback */
@@ -1903,7 +1917,7 @@ table.scroll thead th {
 thead tr th { 
     height: 30px;
     line-height: 30px;
-    /*text-align: left;*/
+    text-align: center;
 }
 
 tbody { border-top: 2px solid black; }
