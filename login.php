@@ -50,7 +50,7 @@ try {
      $registrants = $stmt->fetchAll(); 
 	if(count($registrants) > 0)
 		{ 
-	header ('Location: QSO.php'); 
+	header ('Location: QSO.html'); 
 	} 
 	 else 	header ('Location: index.html'); }
 	
