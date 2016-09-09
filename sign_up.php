@@ -3,8 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Splash &mdash; Free Website Template, Free HTML5 Template by FreeHTML5.co</title>
-	  
+		<title>SPORADIC.LOG</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 	
 	<!-- Animate.css -->
@@ -35,7 +34,7 @@
 
 	</head>
 	<body>
-		
+
 	<div class="gtco-loader"></div>
 	
 	<div id="page">
@@ -47,24 +46,12 @@
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="index.html">Splash <em>.</em></a></div>
+				<div id="gtco-logo"><a href="index.html">SPORADIC.log<em>.</em></a></div>
 				</div>
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
 						<li><a href="index.html">HOME</a></li>
-					<!--	<li><a href="tour.html">Tour</a></li>
-						<li class="has-dropdown">
-							<a href="#">Dropdown</a>
-							<ul class="dropdown">
-								<li><a href="#">Web Design</a></li>
-								<li><a href="#">eCommerce</a></li>
-								<li><a href="#">Branding</a></li>
-								<li><a href="#">API</a></li>
-							</ul>
-						</li>
-						<li><a href="pricing.html">Pricing</a></li>
-						<li class="active"><a href="contact.html">Contact</a></li>
-						<li class="btn-cta"><a href="#"><span>Get started</span></a></li>!-->
+					 
 					</ul>
 				</div>
 			</div>
@@ -154,7 +141,10 @@
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <button>Sing up</button>
+                                                       
+														<div class="col-md-12">
+														<input type="submit" class="btn btn-primary" value="Sing up">
+													</div>
                                                     </div>
 
                                                 </form>
