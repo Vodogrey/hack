@@ -1882,12 +1882,10 @@ text-align: center;
 	border-width: 1px solid #333;
     background: #fc3; /* Цвет фона */
     padding: 10px; /* Поля вокруг текста */
-	
 }
  
 table.scroll {
     width: 100%;
-    
 }
 
 table.scroll th,

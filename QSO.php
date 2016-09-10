@@ -162,7 +162,7 @@ do{
 					
 <div class="row">
 					
-                                                        
+                     <form   action="#" method="post" >                                   
 					 <table class="QSO_Top_panel" align="center">
 						   <tbody>
 							 
@@ -246,7 +246,7 @@ do{
 							</tr>
 							  </tbody>
 					</table> 
-	
+	  <form>
 					
 						
 					</div>
