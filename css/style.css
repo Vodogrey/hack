@@ -1872,12 +1872,19 @@ singup_h1 {
 	
 	
 }
-#QSO_Top_panel {
+QSO_Top_panel {
 	  
 text-align: center;
 
 }
-
+.tQSO {
+	text-align: center;
+	border-width: 1px solid #333;
+    background: #fc3; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+	
+}
+ 
 table.scroll {
     width: 100%;
     
