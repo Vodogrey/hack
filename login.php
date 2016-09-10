@@ -9,7 +9,7 @@ $pass= $_POST['password'];
 
 try {
 	if ($db) echo "Connect OK";
-	$sql_select = "select * from users where LOGIN_USERS = '$username' and PASSWORD_USERS = '$pass'";
+	$sql_select = "select * from users where (LOGIN_USERS = '$username' or EMAIL_USERS = '$username') and PASSWORD_USERS = '$pass'";
 	
 	if (mysql_query($sql_select))
 			echo "select OK";

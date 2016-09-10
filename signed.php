@@ -16,50 +16,50 @@ $callsign = $_POST['callsign'];
 
 if ($db) echo "Connect OK";
 
-if ($username && $login && $password && $cpassword && $email && $secquestion && $answer)
+$req = "select * from USERS where LOGIN_USERS = '$login'";
+		if (!$isNew = mysql_query($req))
+			echo "fuck";
+
+if ($username && $login && $password && $cpassword && $email && $secquestion && $answer && mysql_num_rows($isNew) == 0)
 {
 	echo "All right";
 	if ($password == $cpassword)
 	{
 		echo "passwords OK";
-		$sql = "INSERT INTO users (LOGIN_USERS, PASSWORD_USERS, FIRSTNAME_USERS,
-										  BIRTHDATE_USERS, FIRSTCONNECT_USERS)
-					   VALUES ('$login', '$password', '$username', '$date', '$experience')";
-		
-				
-		if (mysql_query($sql))
-			echo "insert OK";
-		else 
-			echo "Input error";
-		mysql_query("commit");
-		if ($callsign != '')
-		{
-			$sql = "INSERT INTO cals (CALL_CALLS) values ('$callsign')";
-			if (mysql_query($sql)) echo "callsign OK";
+
+			$sql = "INSERT INTO users (LOGIN_USERS, PASSWORD_USERS, FIRSTNAME_USERS,
+											  BIRTHDATE_USERS, FIRSTCONNECT_USERS, EMAIL_USERS, QUESTION_USERS, ANSWER_USERS)
+						   VALUES ('$login', '$password', '$username', '$date', '$experience', '$email', '$secquestion', '$answer')";
+			
+					
+			if (mysql_query($sql))
+				echo "insert OK";
+			else 
+				echo "Input error";
 			mysql_query("commit");
-			$result = mysql_query("SELECT * FROM users WHERE LOGIN_USERS = '$login'");
-			$myrow = mysql_fetch_array($result);
-			$myuserid = $myrow['ID_USERS'];
-			if (!empty($myuserid)) {echo "userid OK"; echo $myuserid;}
-			$result = mysql_query("SELECT * FROM cals WHERE CALL_CALLS = '$callsign'");
-			$myrow = mysql_fetch_array($result);
-			$mycallid = $myrow['ID_CALLS'];
-			if (!empty($mycallid)) {echo "callid OK"; echo $mycallid;}
-			if (mysql_query("INSERT INTO usercalls (ID_USER, ID_CALL, ISOWNER_USERCALLS) VALUES ('$myuserid', '$mycallid', 1)"))
-				echo "Call and user sync";
-			
-			
-			
-			
-		}
-		header ('Location: index.php');
+			if ($callsign != '')
+			{
+				$sql = "INSERT INTO cals (CALL_CALLS) values ('$callsign')";
+				if (mysql_query($sql)) echo "callsign OK";
+				mysql_query("commit");
+				$result = mysql_query("SELECT * FROM users WHERE LOGIN_USERS = '$login'");
+				$myrow = mysql_fetch_array($result);
+				$myuserid = $myrow['ID_USERS'];
+				if (!empty($myuserid)) {echo "userid OK"; echo $myuserid;}
+				$result = mysql_query("SELECT * FROM cals WHERE CALL_CALLS = '$callsign'");
+				$myrow = mysql_fetch_array($result);
+				$mycallid = $myrow['ID_CALLS'];
+				if (!empty($mycallid)) {echo "callid OK"; echo $mycallid;}
+				if (mysql_query("INSERT INTO usercalls (ID_USER, ID_CALL, ISOWNER_USERCALLS) VALUES ('$myuserid', '$mycallid', 1)"))
+					echo "Call and user sync";
+				
+				
+			}
+			header ('Location: index.php');
+			setcookie("login", $login);
+			setcookie("pass", $password);
 	}
-	} else header ('Location: sign_up.php');
- 
-
-; 
-
-
+} else header ('Location: sign_up.php');
 
 
 ?>

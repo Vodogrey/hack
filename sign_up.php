@@ -46,11 +46,11 @@
 			
 			<div class="row">
 				<div class="col-sm-4 col-xs-12">
-				<div id="gtco-logo"><a href="index.html">SPORADIC.log<em>.</em></a></div>
+				<div id="gtco-logo"><a href="index.php">SPORADIC.log<em>.</em></a></div>
 				</div>
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
-						<li><a href="index.html">HOME</a></li>
+						<li><a href="index.php">HOME</a></li>
 					 
 					</ul>
 				</div>
@@ -89,13 +89,13 @@
                                                     <div class="row form-group">
                                                         <div class="col-md-12">
                                                             <label for="date">Date of Birth</label>
-                                                            <input type="date" class="form-control" name="date" id="date">
+                                                            <input type="date" class="form-control" name="date" id="date" min="1900-01-01" max="<?=date('Y-m-d',strtotime("+1 day"));?>">
                                                         </div>
                                                     </div>
                                                     <div class="row form-group">
                                                         <div class="col-md-12">
                                                             <label for="experience">Your experience</label>
-                                                            <input type="date" class="form-control" name="experience" id="experience">
+                                                            <input type="date" class="form-control" name="experience" id="experience" min="1900-01-01" max="<?=date('Y-m-d',strtotime("+1 day"));?>">
                                                         </div>
                                                     </div>
                                                     <div class="row form-group">
@@ -119,7 +119,7 @@
                                                     <div class="row form-group">
                                                         <div class="col-md-12">
                                                             <label for="email">Email</label>
-                                                            <input type="text" class="form-control" name="email" id="email">
+                                                            <input type="email" class="form-control" name="email" id="email">
                                                         </div>
                                                     </div>
                                                     <div class="row form-group">
